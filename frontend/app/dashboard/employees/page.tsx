@@ -77,7 +77,7 @@ export default function EmployeesPage() {
           <Link
             href="/dashboard/employees/add"
             data-testid="add-employee-btn"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+            className="bg-primary bg-green-300 text-green-700 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             Add Employee
@@ -102,24 +102,24 @@ export default function EmployeesPage() {
               <table className="w-full">
                 <thead className="bg-muted/50 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider">
                   <tr>
-                    <th className="p-4">Name</th>
-                    <th className="p-4">Email</th>
-                    <th className="p-4">Designation</th>
-                    <th className="p-4">Department</th>
-                    <th className="p-4">Salary</th>
-                    <th className="p-4">Status</th>
-                    <th className="p-4">Actions</th>
+                    <th className="p-4 border text-center">Name</th>
+                    <th className="p-4 border text-center">Email</th>
+                    <th className="p-4 border text-center">Designation</th>
+                    <th className="p-4 border text-center">Department</th>
+                    <th className="p-4 border text-center">Salary</th>
+                    <th className="p-4 border text-center">Status</th>
+                    <th className="p-4 border text-center">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   {employees.map((employee) => (
                     <tr key={employee._id} className="border-b transition-colors hover:bg-muted/50">
-                      <td className="p-4 text-sm font-medium">{employee.name}</td>
-                      <td className="p-4 text-sm text-muted-foreground">{employee.email}</td>
-                      <td className="p-4 text-sm">{employee.designation}</td>
-                      <td className="p-4 text-sm">{employee.department}</td>
-                      <td className="p-4 text-sm font-mono font-medium">{formatCurrency(employee.salary.basic)}</td>
-                      <td className="p-4">
+                      <td className="border p-4 text-sm text-center font-medium">{employee.name}</td>
+                      <td className="border p-4 text-sm text-center text-muted-foreground">{employee.email}</td>
+                      <td className="border p-4 text-sm text-center">{employee.designation}</td>
+                      <td className="border p-4 text-sm text-center">{employee.department}</td>
+                      <td className="border p-4 text-sm text-center font-mono font-medium">{formatCurrency(employee.salary.basic)}</td>
+                      <td className="p-4 border text-center">
                         <span className={`inline-block px-2 py-1 text-xs font-medium rounded ${
                           employee.status === 'Active'
                             ? 'bg-success/10 text-success'
@@ -128,8 +128,8 @@ export default function EmployeesPage() {
                           {employee.status}
                         </span>
                       </td>
-                      <td className="p-4">
-                        <div className="flex items-center gap-2">
+                      <td className="p-4 border text-center w-fit ">
+                        <div className="flex gap-2">
                           <Link
                             href={`/dashboard/employees/${employee._id}`}
                             data-testid={`view-employee-${employee._id}`}

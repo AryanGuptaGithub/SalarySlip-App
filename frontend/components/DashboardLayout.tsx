@@ -78,7 +78,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="flex flex-col flex-grow border-r bg-card pt-5 overflow-y-auto">
           <div className="flex items-center flex-shrink-0 px-6 mb-8">
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <DollarSign className="w-6 h-6 text-white" />
+              <DollarSign className="w-6 h-6 text-green-500" />
             </div>
             <span className="ml-3 text-xl font-heading font-bold">FinanceFlow</span>
           </div>
@@ -126,7 +126,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             <button
               onClick={handleLogout}
               data-testid="logout-btn"
-              className="w-full flex items-center justify-center px-4 py-2 text-sm font-medium text-destructive hover:bg-destructive/10 rounded-md transition-all"
+              className="w-full flex items-center border bg-red-300 text-red-500 hover:bg-red-400 hover:text-red-700 justify-center px-4 py-2 text-sm font-medium text-destructive hover:bg-destructive/10 rounded-md transition-all"
             >
               <LogOut className="mr-2 h-4 w-4" />
               Logout

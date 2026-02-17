@@ -112,10 +112,12 @@ export const api = {
   },
 
   // Dashboard
-  getDashboardStats: async (token: string) => {
-    const res = await fetch(`${API_URL}/api/dashboard/stats`, {
-      headers: { 'Authorization': `Bearer ${token}` },
-    });
-    return res.json();
-  },
+    getDashboardStats: async (token: string) => {
+      const res = await fetch(`${API_URL}/api/dashboard/stats`, {
+        headers: { 'Authorization': `Bearer ${token}` },
+      });
+      return res.json();
+    },
+
+    
 };

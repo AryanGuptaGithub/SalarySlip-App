@@ -51,14 +51,14 @@ export default function Home() {
           <Link
             href="/auth/register"
             data-testid="hero-get-started-btn"
-            className="px-8 py-3 bg-primary text-white rounded-md hover:bg-primary/90 transition-all shadow-sm hover:shadow-md font-medium inline-flex items-center gap-2"
+            className="px-8 py-3 bg-primary text-white bg-black rounded-lg hover:bg-primary/90 transition-all  hover:shadow-md font-medium inline-flex items-center gap-2"
           >
             Get Started <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="/auth/login"
             data-testid="hero-login-btn"
-            className="px-8 py-3 border border-input bg-background hover:bg-accent transition-all rounded-md font-medium"
+            className="px-8 py-3  bg-green-400 text-white border-input bg-background hover:bg-accent transition-all rounded-lg font-medium"
           >
             Sign In
           </Link>

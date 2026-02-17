@@ -77,7 +77,7 @@ export default function SalarySlipsPage() {
           <Link
             href="/dashboard/salary-slips/generate"
             data-testid="generate-salary-slip-btn"
-            className="bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
+            className="bg-primary bg-green-300 text-green-700 text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md inline-flex items-center gap-2"
           >
             <Plus className="w-4 h-4" />
             Generate Slip

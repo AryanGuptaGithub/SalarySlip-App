@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { DollarSign, Loader2 } from 'lucide-react';
+import { DollarSign, Loader2, ArrowLeft } from 'lucide-react';
 import { toast } from 'sonner';
 import { api } from '@/lib/api';
+
 
 export default function LoginPage() {
   const router = useRouter();
@@ -42,9 +43,18 @@ export default function LoginPage() {
     <div className="min-h-screen bg-gradient-to-br from-white via-blue-50 to-indigo-50 flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg border shadow-sm p-8">
+
+          <Link
+  href="/"
+    className="flex items-center gap-2 border px-2 py-1 w-fit bg-gray-200 text-white hover:bg-gray-400 rounded-3xl text-sm text-primary hover:text-primary/80 font-medium"
+  >
+    <ArrowLeft className="w-4 h-4" />
+    Back
+  </Link>
           <div className="flex justify-center mb-6">
+
             <div className="w-14 h-14 bg-primary rounded-lg flex items-center justify-center">
-              <DollarSign className="w-8 h-8 text-white" />
+              <DollarSign className="w-8 h-8 text-green-500" />
             </div>
           </div>
           
@@ -88,7 +98,7 @@ export default function LoginPage() {
               type="submit"
               disabled={loading}
               data-testid="login-submit-btn"
-              className="w-full bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-primary text-primary-foreground bg-green-400 text-white hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? (
                 <>
@@ -103,7 +113,7 @@ export default function LoginPage() {
 
           <div className="mt-6 text-center text-sm">
             <span className="text-muted-foreground">Don't have an account? </span>
-            <Link href="/auth/register" className="text-primary hover:underline font-medium" data-testid="register-link">
+            <Link href="/auth/register" className="text-primary text-red-500 hover:underline font-medium" data-testid="register-link">
               Register here
             </Link>
           </div>

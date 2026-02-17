@@ -1,0 +1,169 @@
+{
+  "project_name": "FinanceFlow SaaS",
+  "design_philosophy": {
+    "identity": "The Anti-AI Designer (E1)",
+    "core_principles": [
+      "Fusion over Imitation: Mix Swiss clarity with Soft Utility approachability.",
+      "Emotion First: Trust, Precision, and Calm.",
+      "Content is King: Data is the hero. Numbers must be legible.",
+      "Negative Space: Use 'p-8' where others use 'p-4'. Breathing room equals luxury.",
+      "Contrast: High contrast for data legibility. No gray-on-gray text."
+    ],
+    "anti_patterns": [
+      "Purple/Teal primary buttons (Too generic SaaS).",
+      "Center-aligned text for data tables.",
+      "Gradients on text (Reduces legibility for financial data).",
+      "The 'Card' everywhere disease (Use whitespace to separate sections instead)."
+    ]
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Manrope, sans-serif",
+      "body": "Inter, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight leading-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl font-semibold tracking-tight",
+      "body_lg": "text-lg leading-relaxed",
+      "body_base": "text-base leading-relaxed text-muted-foreground",
+      "caption": "text-sm text-muted-foreground uppercase tracking-widest"
+    },
+    "usage_rules": [
+      "Use 'Manrope' for all Headings (h1-h3).",
+      "Use 'Inter' for body text, inputs, and standard UI elements.",
+      "Use 'JetBrains Mono' for ALL currency values, transaction IDs, and invoice numbers.",
+      "Never center-align headings unless it's the Landing Page Hero.",
+      "Use 'tracking-tight' for all headings above 24px."
+    ]
+  },
+  "colors": {
+    "mode": "light_preferred_with_dark_toggle",
+    "palette": {
+      "light": {
+        "background": "#FFFFFF",
+        "foreground": "#0F172A",
+        "primary": "#4F46E5",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#F1F5F9",
+        "secondary_foreground": "#0F172A",
+        "accent": "#F8FAFC",
+        "accent_foreground": "#0F172A",
+        "border": "#E2E8F0",
+        "input": "#E2E8F0",
+        "ring": "#4F46E5",
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "destructive": "#EF4444"
+      },
+      "dark": {
+        "background": "#020617",
+        "foreground": "#F8FAFC",
+        "primary": "#6366F1",
+        "primary_foreground": "#FFFFFF",
+        "secondary": "#1E293B",
+        "secondary_foreground": "#F8FAFC",
+        "accent": "#1E293B",
+        "accent_foreground": "#F8FAFC",
+        "border": "#1E293B",
+        "input": "#1E293B",
+        "ring": "#6366F1",
+        "success": "#34D399",
+        "warning": "#FBBF24",
+        "destructive": "#F87171"
+      }
+    },
+    "usage_rules": [
+      "Primary Color (#4F46E5) is for Main Actions ONLY (Save, Pay, Send).",
+      "Secondary Color is for 'Cancel' or 'Back' actions.",
+      "Success Color is for 'Paid' status and positive trends.",
+      "Destructive Color is for 'Overdue', 'Delete', and negative trends.",
+      "Do not use gradients for backgrounds. Use solid colors with subtle borders."
+    ]
+  },
+  "layout_and_spacing": {
+    "spacing_system": "Generous (2x standard)",
+    "container_padding": "p-6 md:p-10",
+    "grid_strategy": "The 'Bento' Grid (Mode B for Dashboard)",
+    "border_radius": "rounded-md (6px) - Professional & Crisp",
+    "glassmorphism": {
+      "enabled": true,
+      "rules": "Use backdrop-blur-md bg-white/70 border border-white/20 for sticky headers and floating panels."
+    },
+    "dashboard_layout": {
+      "type": "sidebar_layout",
+      "sidebar_width": "w-64",
+      "main_content_padding": "p-8",
+      "card_gap": "gap-6"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 rounded-md font-medium transition-all shadow-sm hover:shadow-md",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-4 py-2 rounded-md font-medium border border-transparent",
+      "outline": "border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 rounded-md font-medium"
+    },
+    "cards": {
+      "default": "bg-card text-card-foreground rounded-lg border shadow-sm p-6",
+      "interactive": "bg-card text-card-foreground rounded-lg border shadow-sm p-6 hover:shadow-md hover:border-primary/20 transition-all cursor-pointer",
+      "metric": "flex flex-col gap-2 p-6 bg-card rounded-lg border shadow-sm"
+    },
+    "inputs": {
+      "default": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "tables": {
+      "wrapper": "w-full overflow-auto rounded-md border",
+      "header": "bg-muted/50 text-left text-xs font-medium text-muted-foreground uppercase tracking-wider",
+      "row": "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+      "cell": "p-4 align-middle text-sm font-normal"
+    },
+    "charts": {
+      "library": "Recharts (via Shadcn Charts)",
+      "style": "Minimalist. Thin lines. Distinct tooltip.",
+      "colors": ["#4F46E5", "#10B981", "#F59E0B", "#EF4444", "#8B5CF6"]
+    }
+  },
+  "visual_enhancers": {
+    "shadows": {
+      "soft": "0 2px 10px rgba(0,0,0,0.03)",
+      "float": "0 10px 30px rgba(0,0,0,0.08)"
+    },
+    "micro_interactions": {
+      "hover_lift": "hover:-translate-y-0.5 transition-transform duration-200",
+      "button_click": "active:scale-95 transition-transform duration-100"
+    },
+    "textures": "Use subtle noise texture on the dashboard background (opacity 0.02) to reduce digital flatness."
+  },
+  "image_urls": {
+    "hero_team": "https://images.unsplash.com/photo-1758873268663-5a362616b5a7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzEzMDQ0MzV8MA&ixlib=rb-4.1.0&q=85",
+    "collaboration_meeting": "https://images.unsplash.com/photo-1760611656007-f767a8082758?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBvZmZpY2UlMjB0ZWFtJTIwY29sbGFib3JhdGlvbnxlbnwwfHx8fDE3NzEzMDQ0MzV8MA&ixlib=rb-4.1.0&q=85",
+    "office_interior": "https://images.unsplash.com/photo-1765371514743-45bd8e6c0a28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwYnVzaW5lc3MlMjBtZWV0aW5nfGVufDB8fHx8MTc3MTMwNDQzNXww&ixlib=rb-4.1.0&q=85",
+    "logo_placeholder": "https://placehold.co/400x100?text=FinanceFlow+Logo"
+  },
+  "instructions_to_main_agent": [
+    "Install 'lucide-react' for icons. Use icons for all sidebar items and key actions.",
+    "Install 'recharts' for dashboard graphs.",
+    "Install 'date-fns' for date formatting.",
+    "Use 'sonner' for all toast notifications (Success: CheckCircle, Error: AlertTriangle).",
+    "For the Salary Slip PDF, use a dedicated print-friendly layout. Hidden on screen, visible on print (@media print).",
+    "The Dashboard must have a 'Welcome Back, [Name]' header with the current date.",
+    "Use Skeleton loaders (Shadcn Skeleton) for all data fetching states. Never show empty white space.",
+    "Ensure the 'Invoice' creation form uses a two-column grid for 'Bill To' and 'Bill From'.",
+    "Implement a 'Dark Mode' toggle in the sidebar or header.",
+    "Use 'badge' components for status indicators (Paid=Green, Pending=Yellow, Overdue=Red).",
+    "DO NOT use standard HTML <table>. Use the Shadcn Table component.",
+    "DO NOT use standard HTML <select>. Use Shadcn Select component.",
+    "DO NOT use standard HTML <input type='date'>. Use Shadcn Calendar/Popover."
+  ],
+  "universal_guidelines": [
+    "You tend to converge toward generic outputs. Avoid this.",
+    "Dark colors look good when used independently without gradients.",
+    "Don't make generic centered layouts.",
+    "Create depth through layered design elements.",
+    "Every interaction needs micro-animations.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Use 'sonner' for toasts.",
+    "All interactive elements MUST include 'data-testid' attribute (kebab-case)."
+  ]
+}
